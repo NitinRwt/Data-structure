@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+void cancatenate(char *a,char *b)
+{
+	int n1=strlen(a);
+	int n2=strlen(b);
+	
+	for(int i=0;i<n2;i++)
+	{
+		a[n1]=b[i];
+		n1++;
+	}
+	a[n1]='\0';
+}
+int main()
+{
+	char a[100],b[100],temp;
+	printf("Enter string 1:");
+	gets(a);
+	int alen=strlen(a);
+	printf("Enter string 2:");
+	gets(b);
+	int blen=strlen(b);
+	cancatenate(a,b);
+	puts(a);
+	return 0;
+}
